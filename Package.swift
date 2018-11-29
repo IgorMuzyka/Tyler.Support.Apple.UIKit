@@ -23,7 +23,7 @@ let package = Package(
             "Tyler.Tag", 
             "Tyler.Substitutes",
             "Tyler",
-            "Tyler.Support.Apple.Common"
+            "Tyler.Support.Apple.Common",
         ]),
     ]
 )

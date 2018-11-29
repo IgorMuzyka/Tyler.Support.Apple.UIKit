@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
 	s.source_files = "Sources/TylerSupportAppleUIKit/**/*"
 
 	s.dependency "Variable"
+	s.dependency "Style"
 	s.dependency "Tag"
 	s.dependency "Substitutes"
     s.dependency "Tyler"
