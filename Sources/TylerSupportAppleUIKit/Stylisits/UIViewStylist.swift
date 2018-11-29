@@ -10,6 +10,8 @@ open class UIViewStylist: GenericStylist {
 
     public static var keyPath: AnyKeyPath?
 
+    public required init() {}
+
     public func style(stylable view: UIView, style: UIViewStyle, tags: [Tag], pair: VariableResolutionPair) throws {
         switch style {
         case .isUserInteractionEnabled(let value): view.isUserInteractionEnabled = try value.resolve(pair)

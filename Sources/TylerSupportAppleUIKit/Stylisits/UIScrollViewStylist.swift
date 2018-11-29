@@ -10,6 +10,8 @@ open class UIScrollViewStylist: GenericStylist {
 
     public static var keyPath: AnyKeyPath?
 
+    public required init() {}
+
 	public func style(stylable scrollView: UIScrollView, style: UIScrollViewStyle, tags: [Tag], pair: VariableResolutionPair) throws {
 		switch style {
 		case .isScrollEnabled(let value): scrollView.isScrollEnabled = try value.resolve(pair)

@@ -10,6 +10,8 @@ open class UIButtonStylist: GenericStylist {
 
     public static var keyPath: AnyKeyPath?
 
+    public required init() {}
+
 	public func style(stylable button: UIButton, style: UIButtonStyle, tags: [Tag], pair: VariableResolutionPair) throws {
         switch style {
         case .buttonTitle(let value, let state): button.setTitle(try value.resolve(pair), for: try state.resolve(pair).native)

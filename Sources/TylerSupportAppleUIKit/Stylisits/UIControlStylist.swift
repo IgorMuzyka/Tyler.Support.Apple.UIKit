@@ -10,6 +10,8 @@ open class UIControlStylist: GenericStylist {
 
     public static var keyPath: AnyKeyPath?
 
+    public required init() {}
+
 	public func style(stylable control: UIControl, style: UIControlStyle, tags: [Tag], pair: VariableResolutionPair) throws {
 		switch style {
 		case .isEnabled(let value): control.isEnabled = try value.resolve(pair)

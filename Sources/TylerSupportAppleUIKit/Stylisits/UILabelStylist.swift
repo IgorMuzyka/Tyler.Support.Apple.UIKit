@@ -10,6 +10,8 @@ open class UILabelStylist: GenericStylist {
 
     public static var keyPath: AnyKeyPath?
 
+    public required init() {}
+
 	public func style(stylable label: UILabel, style: UILabelStyle, tags: [Tag], pair: VariableResolutionPair) throws {
         switch style {
         case .font(let value): label.font = try value.resolve(pair).native

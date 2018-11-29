@@ -14,6 +14,8 @@ Pod::Spec.new do |s|
 	s.dependency "Variable"
 	s.dependency "Tag"
 	s.dependency "Substitutes"
+    s.dependency "Tyler"
+    s.dependency "TylerSupportAppleCommon"
 
 	s.osx.deployment_target = "10.14"
 	s.ios.deployment_target = "10.0"

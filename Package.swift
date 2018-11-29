@@ -13,13 +13,17 @@ let package = Package(
         .package(url: "https://github.com/IgorMuzyka/Tyler.Style", .branch("master")),
         .package(url: "https://github.com/IgorMuzyka/Tyler.Tag", .branch("master")),
         .package(url: "https://github.com/IgorMuzyka/Tyler.Substitutes", .branch("master")),
+        .package(url: "https://github.com/IgorMuzyka/Tyler", .branch("master")),
+        .package(url: "https://github.com/IgorMuzyka/Tyler.Support.Apple.Common", .branch("master")),
     ],
     targets: [
         .target(name: "TylerSupportAppleUIKit", dependencies: [
             "Tyler.Variable", 
             "Tyler.Style", 
             "Tyler.Tag", 
-            "Tyler.Substitutes"
+            "Tyler.Substitutes",
+            "Tyler",
+            "Tyler.Support.Apple.Common"
         ]),
     ]
 )
