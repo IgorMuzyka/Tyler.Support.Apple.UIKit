@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
 
-	s.name = "Tyler.Support.Apple.UIKit"
+	s.name = "TylerSupportAppleUIKit"
 	s.version = "0.0.1"
 	s.swift_version = "4.2"
 	s.summary = "Tyler Support Apple UIKit"
@@ -11,9 +11,9 @@ Pod::Spec.new do |s|
 	s.author = { 'igormuzyka' => "igormuzyka42@gmail.com" }
 	s.source_files = "Sources/TylerSupportAppleUIKit/*"
 
-	s.dependency "Tyler.Variable"
-	s.dependency "Tyler.Tag"
-	s.dependency "Tyler.Substitutes"
+	s.dependency "Variable"
+	s.dependency "Tag"
+	s.dependency "Substitutes"
 
 	s.osx.deployment_target = "10.14"
 	s.ios.deployment_target = "10.0"
