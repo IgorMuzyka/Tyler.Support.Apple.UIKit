@@ -5,4 +5,5 @@ public enum UIKitViewType: StringLiteralType {
 	case button = "__C.UIButton.Type"
 	case label = "__C.UILabel.Type"
 	case scrollView = "__C.UIScrollView.Type"
+    case imageView = "__C.UIImageView.Type"
 }
