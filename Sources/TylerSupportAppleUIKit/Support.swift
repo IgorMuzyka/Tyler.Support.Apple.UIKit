@@ -14,6 +14,7 @@ extension Factory {
             .add(UILabel.init)
             .add(UIButton.init)
             .add(UIScrollView.init)
+            .add(UIImageView.init)
     }
 }
 
@@ -27,6 +28,7 @@ extension StylistsStore {
             .add(stylist: UILabelStylist(), for: UILabelStyle.self)
             .add(stylist: UIButtonStylist(), for: UIButtonStyle.self)
             .add(stylist: UIScrollViewStylist(), for: UIScrollViewStyle.self)
+            .add(stylist: UIImageViewStylist(), for: UIImageViewStyle.self)
     }
 }
 
@@ -40,6 +42,7 @@ extension StylesSerializersStore {
             .register(UILabelStyle.self)
             .register(UIButtonStyle.self)
             .register(UIScrollViewStyle.self)
+            .register(UIImageViewStyle.self)
     }
 }
 
