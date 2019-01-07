@@ -9,11 +9,13 @@ public enum UIImageViewStyle: Style {
     case image(Variable<Image?>)
     case highlightedImage(Variable<Image?>)
     case isHighlighted(Variable<Bool>)
+    case url(Variable<String>)
 
     private enum CodingKeys: String, CodingKey {
         case image
         case highlightedImage
         case isHighlighted
+        case url
     }
 
     public enum UIImageViewStyleCodingError: Error {
@@ -29,6 +31,8 @@ public enum UIImageViewStyle: Style {
             self = .highlightedImage(value)
         } else if let value = try? values.decode(Variable<Bool>.self, forKey: .isHighlighted) {
             self = .isHighlighted(value)
+        } else if let value = try? values.decode(Variable<String>.self, forKey: .url) {
+            self. url(value)
         } else {
             throw UIImageViewStyleCodingError.decoding("\(dump(values))")
         }
@@ -41,6 +45,7 @@ public enum UIImageViewStyle: Style {
         case .image(let value): try container.encode(value, forKey: .image)
         case .highlightedImage(let value): try container.encode(value, forKey: .highlightedImage)
         case .isHighlighted(let value): try container.encode(value, forKey: .isHighlighted)
+        case .url(let value): try container.encode(value, forKey: .url)
         }
     }
 }
