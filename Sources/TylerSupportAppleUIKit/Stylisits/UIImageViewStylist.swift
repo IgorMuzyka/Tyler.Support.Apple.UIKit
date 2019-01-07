@@ -19,8 +19,8 @@ open class UIImageViewStylist: GenericStylist {
         case .highlightedImage(let value): view.highlightedImage = try value.resolve(pair)??.native
         case .isHighlighted(let value): view.isHighlighted = try value.resolve(pair)
         case .url(let value):
-            let url = URL(string: value.resolve.pair)
-            view.setImage(with: url)
+            let url = URL(string: try value.resolve(pair))
+            view.kf.setImage(with: url)
         }
     }
 }
