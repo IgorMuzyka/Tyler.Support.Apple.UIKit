@@ -2,10 +2,10 @@
 import Style
 import Tag
 import Variable
-import Kingfisher
 
 #if os(iOS) || os(tvOS)
 import UIKit
+import Kingfisher
 
 open class UIImageViewStylist: GenericStylist {
 

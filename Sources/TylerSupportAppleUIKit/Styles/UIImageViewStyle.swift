@@ -32,7 +32,7 @@ public enum UIImageViewStyle: Style {
         } else if let value = try? values.decode(Variable<Bool>.self, forKey: .isHighlighted) {
             self = .isHighlighted(value)
         } else if let value = try? values.decode(Variable<String>.self, forKey: .url) {
-            self. url(value)
+            self = .url(value)
         } else {
             throw UIImageViewStyleCodingError.decoding("\(dump(values))")
         }
