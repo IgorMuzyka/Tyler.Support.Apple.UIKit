@@ -3,6 +3,7 @@ import Variable
 import Substitutes
 import Style
 import Tag
+import TypePreservingCodingAdapter
 
 public enum UILabelStyle: Style {
 
@@ -38,6 +39,11 @@ public enum UILabelStyle: Style {
 //    case disabledBackground
 //    case typingAttributes
 //    case clearButtonMode
+}
+
+extension UILabelStyle {
+
+    public static var alias: Alias = "UILabelStyle"
 }
 
 extension UILabelStyle: Codable {

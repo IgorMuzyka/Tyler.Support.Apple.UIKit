@@ -3,6 +3,7 @@ import Variable
 import Substitutes
 import Style
 import Tag
+import TypePreservingCodingAdapter
 
 public enum UIImageViewStyle: Style {
 
@@ -10,6 +11,14 @@ public enum UIImageViewStyle: Style {
     case highlightedImage(Variable<Image?>)
     case isHighlighted(Variable<Bool>)
     case url(Variable<String>)
+}
+
+extension UIImageViewStyle {
+
+    public static var alias: Alias = "UIImageViewStyle"
+}
+
+extension UIImageViewStyle: Codable {
 
     private enum CodingKeys: String, CodingKey {
         case image

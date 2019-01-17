@@ -3,12 +3,18 @@ import Variable
 import Substitutes
 import Style
 import Tag
+import TypePreservingCodingAdapter
 
 public enum UIControlStyle: Style {
 
     case isEnabled(Variable<Bool>)
     case isSelected(Variable<Bool>)
     case isHighlighted(Variable<Bool>)
+}
+
+extension UIControlStyle {
+
+    public static var alias: Alias = "UIControlStyle"
 }
 
 extension UIControlStyle: Codable {

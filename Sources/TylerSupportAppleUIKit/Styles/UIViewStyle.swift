@@ -3,6 +3,7 @@ import Variable
 import Substitutes
 import Style
 import Tag
+import TypePreservingCodingAdapter
 
 public enum UIViewStyle: Style {
 
@@ -19,6 +20,11 @@ public enum UIViewStyle: Style {
 	case clearsContextBeforeDrawing(Variable<Bool>)
 	case isHidden(Variable<Bool>)
 	case contentMode(Variable<ViewContentMode>)
+}
+
+extension UIViewStyle {
+
+    public static var alias: Alias = "UIViewStyle"
 }
 
 extension UIViewStyle: Codable {

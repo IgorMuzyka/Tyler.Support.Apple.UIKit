@@ -2,6 +2,7 @@
 import Tyler
 import Style
 import TylerSupportAppleCommon
+import TypePreservingCodingAdapter
 
 #if os(iOS) || os(tvOS)
 import UIKit
@@ -32,17 +33,23 @@ extension StylistsStore {
     }
 }
 
-extension StylesSerializersStore {
+extension TypePreservingCodingAdapter {
 
-    public static var defaultUIKit: StylesSerializersStore {
-        return StylesSerializersStore(decoder: JSONDecoder())
-            .register(UIViewStyle.self)
-            .register(UIControlStyle.self)
-            .register(CALayerStyle.self)
-            .register(UILabelStyle.self)
-            .register(UIButtonStyle.self)
-            .register(UIScrollViewStyle.self)
-            .register(UIImageViewStyle.self)
+    public func registerUIKitSupportStyles() {
+        register(type: CALayerStyle.self)
+        register(alias: CALayerStyle.alias, for: CALayerStyle.self)
+        register(type: UIViewStyle.self)
+        register(alias: UIViewStyle.alias, for: UIViewStyle.self)
+        register(type: UIControlStyle.self)
+        register(alias: UIControlStyle.alias, for: UIControlStyle.self)
+        register(type: UILabelStyle.self)
+        register(alias: UILabelStyle.alias, for: UILabelStyle.self)
+        register(type: UIButtonStyle.self)
+        register(alias: UIButtonStyle.alias, for: UIButtonStyle.self)
+        register(type: UIImageViewStyle.self)
+        register(alias: UIImageViewStyle.alias, for: UIImageViewStyle.self)
+        register(type: UIScrollViewStyle.self)
+        register(alias: UIScrollViewStyle.alias, for: UIScrollViewStyle.self)
     }
 }
 

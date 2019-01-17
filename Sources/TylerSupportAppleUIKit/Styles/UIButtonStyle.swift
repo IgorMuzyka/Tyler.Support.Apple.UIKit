@@ -3,6 +3,7 @@ import Variable
 import Substitutes
 import Style
 import Tag
+import TypePreservingCodingAdapter
 
 public enum UIButtonStyle: Style {
 
@@ -21,6 +22,11 @@ public enum UIButtonStyle: Style {
 	case adjustsImageWhenDisabled(Variable<Bool>)
 	case showsTouchWhenHighlighted(Variable<Bool>)
 //    case action(Action)
+}
+
+extension UIButtonStyle {
+
+    public static var alias: Alias = "UIButtonStyle"
 }
 
 extension UIButtonStyle: Codable {

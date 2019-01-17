@@ -3,6 +3,7 @@ import Variable
 import Substitutes
 import Style
 import Tag
+import TypePreservingCodingAdapter
 
 public enum UIScrollViewStyle: Style {
 
@@ -28,6 +29,11 @@ public enum UIScrollViewStyle: Style {
 	case bouncesZoom(Variable<Bool>)
 	case scrollsToTop(Variable<Bool>)
 	case keyboardDismissMode(Variable<ScrollViewKeyboardDismissMode>)
+}
+
+extension UIScrollViewStyle {
+
+    public static var alias: Alias = "UIScrollViewStyle"
 }
 
 extension UIScrollViewStyle: Codable {
