@@ -33,6 +33,8 @@ extension StylistsStore {
     }
 }
 
+#endif
+
 extension TypePreservingCodingAdapter {
 
     public func registerUIKitSupportStyles() {
@@ -52,5 +54,3 @@ extension TypePreservingCodingAdapter {
         register(alias: UIScrollViewStyle.alias, for: UIScrollViewStyle.self)
     }
 }
-
-#endif
