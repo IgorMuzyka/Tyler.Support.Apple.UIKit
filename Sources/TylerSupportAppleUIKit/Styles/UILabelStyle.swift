@@ -7,20 +7,12 @@ import TypePreservingCodingAdapter
 
 public enum UILabelStyle: Style {
 
+    case text(Variable<String>)
     case font(Variable<Font>)
     case textColor(Variable<Color>)
     case textAlignment(Variable<TextAlignment>)
     case numberOfLines(Variable<Int>)
     case lineBreakMode(Variable<LineBreakMode>)
-//    case selectedRange
-//    case editable
-//    case selectable
-//    case dataDetectorTypes
-//    case allowsEditingTextAttributes
-//    case clearsOnInsertion
-//    case textContainerInset
-//    case linkTextAttributes
-//    case lineFragmentPadding
     case minimumScaleFactor(Variable<Number>)
     case adjustsFontSizeToFitWidth(Variable<Bool>)
     case baselineAdjustment(Variable<BaselineAdjustment>)
@@ -28,17 +20,6 @@ public enum UILabelStyle: Style {
     case shadowOffset(Variable<Size>)
     case highlightedTextColor(Variable<Color>)
     case attributedText(Variable<AttributedString>)
-	#warning("handle also NSParagrapheStyle")
-
-    case text(Variable<String>)
-//    case borderStyle
-//    case defaultTextAttributes
-//    case placeholder
-//    case clearsOnBeginEditing
-//    case background
-//    case disabledBackground
-//    case typingAttributes
-//    case clearButtonMode
 }
 
 extension UILabelStyle {
@@ -50,6 +31,7 @@ extension UILabelStyle: Codable {
 
     private enum CodingKeys: String, CodingKey {
 
+        case text
         case font
         case textColor
         case textAlignment
@@ -62,7 +44,6 @@ extension UILabelStyle: Codable {
         case shadowOffset
         case highlightedTextColor
         case attributedText
-        case text
     }
 
     public enum UILabelStyleCodingError: Error {

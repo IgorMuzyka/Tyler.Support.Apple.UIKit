@@ -7,7 +7,6 @@ import TypePreservingCodingAdapter
 
 public enum UIButtonStyle: Style {
 
-//    case buttonType(ButtonType)
 	case buttonTitle(Variable<String>, Variable<ControlState>)
 	case buttonTitleColor(Variable<Color>, Variable<ControlState>)
 	case buttonTitleShadowColor(Variable<Color>, Variable<ControlState>)
@@ -21,7 +20,6 @@ public enum UIButtonStyle: Style {
 	case adjustsImageWhenHighlighted(Variable<Bool>)
 	case adjustsImageWhenDisabled(Variable<Bool>)
 	case showsTouchWhenHighlighted(Variable<Bool>)
-//    case action(Action)
 }
 
 extension UIButtonStyle {
@@ -33,7 +31,6 @@ extension UIButtonStyle: Codable {
 
 	private enum CodingKeys: String, CodingKey {
 
-//		case buttonType
 		case buttonTitle
 		case buttonTitleControlState
 		case buttonTitleColor

@@ -54,6 +54,7 @@ extension UIControlStyle: Codable {
         }
     }
 }
+
 extension Stylable {
 
     @discardableResult
